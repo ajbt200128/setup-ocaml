@@ -53,6 +53,8 @@ export async function installUnixSystemPackages() {
             ]);
             await exec("apk", [
                 "add",
+                "make",
+                "build-base",
                 "bubblewrap",
                 "rsync",
                 ...optionalDependencies,
