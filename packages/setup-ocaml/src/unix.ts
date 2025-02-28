@@ -48,7 +48,6 @@ export async function installUnixSystemPackages() {
     if (PLATFORM === "linux") {
         if (DISTRO === "alpine") {
             const optionalDependencies = await retrieveInstallableOptionalDependencies([
-                "darcs",
                 "mercurial",
             ]);
             await exec("apk", [
